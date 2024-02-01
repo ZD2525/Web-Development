@@ -1,0 +1,452 @@
+/* CSS */
+:root {
+    --primary: #06BBCC;
+    --light: #F0FBFC;
+    --dark: #181d38;
+}
+
+/* General Styles */
+a{
+    text-decoration: none;
+}
+
+p{
+    font-weight: 300;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600
+}
+
+/* Back-to-top button */
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+/* General Buttons */
+.btn {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    transition: .5s;
+}
+
+.btn.btn-primary{
+    color: #FFFFFF;
+    background-color: var(--primary);
+    border: none;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 0px;
+}
+
+
+/* Navbar */
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    margin-right: 30px;
+    padding: 25px 0;
+    font-size: 15px;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+@media (max-width: 992px) {
+    .navbar-light .navbar-nav .nav-link  {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+
+    .navbar-light .navbar-nav {
+        border-top: 1px solid #EEEEEE;
+    }
+}
+
+.navbar-light .navbar-brand{
+    height: 75px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--dark);
+    font-weight: 700;
+}
+
+.navbar-light.sticky-top {
+    top: -100px;
+    transition: .5s;
+}
+
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        margin-top: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    .navbar .dropdown-menu.fade-down {
+        top: 100%;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        transform: rotateX(0deg);
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+}
+
+/* Header carousel */
+@media (max-width: 768px) {
+    .header-carousel .owl-carousel-item {
+        position: relative;
+        min-height: 500px;
+    }
+    
+    .header-carousel .owl-carousel-item img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.header-carousel .owl-nav {
+    position: absolute;
+    top: 50%;
+    right: 8%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.header-carousel .owl-nav .owl-prev,
+.header-carousel .owl-nav .owl-next {
+    margin: 7px 0;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark);
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    font-size: 22px;
+    transition: .5s;
+}
+
+.header-carousel .owl-nav .owl-prev:hover,
+.header-carousel .owl-nav .owl-next:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+
+/* Section Titles */
+.section-title {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+/* Adding the lines to the section titles */
+.section-title::before {
+    position: absolute;
+    content: "";
+    width: calc(100% + 80px);
+    height: 2px;
+    top: 4px;
+    left: -40px;
+    background: var(--primary);
+    z-index: -1;
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: calc(100% + 120px);
+    height: 2px;
+    bottom: 5px;
+    left: -60px;
+    background: var(--primary);
+    z-index: -1;
+}
+
+.section-title.text-start::before {
+    width: calc(100% + 40px);
+    left: 0;
+}
+
+.section-title.text-start::after {
+    width: calc(100% + 60px);
+    left: 0;
+}
+
+
+/* News Section*/
+.news h5{
+    color: var(--dark);
+}
+
+.news img{
+    transition: .5s;
+}
+
+.news a:hover img{
+    transform: scale(1.1);
+}
+
+/* News Page */
+@media (max-width: 768px){
+    #galleria-pic, #vspo-pic,
+    #vspo-pic2, #vspo-pic3,
+    #algp-pic, #tanabata-pic,
+    #audition-pic, #xmas-pic,
+    #achievement-pic{
+        width: 200%;
+    }
+}
+
+/* Video Section*/
+.video-item small{
+    color: var(--dark);
+}
+
+.video-item img {
+    transition: .5s;
+}
+
+.video-item:hover img {
+    transform: scale(1.1);
+}
+
+/* About Page */
+#livestreaming-image,
+#collab-image,
+#multimedia-image{
+    display:none;
+}
+
+#livestreaming-video,
+#collab-video,
+#multimedia-video{
+    width: 100%;
+}
+
+@media (max-width: 768px){
+    #livestreaming-video,
+    #collab-video,
+    #multimedia-video{
+        display:none !important;
+    }
+
+    #livestreaming-image,
+    #collab-image,
+    #multimedia-image{
+        display:block;
+        width: 200%;
+        position: relative;
+        left: 15px;
+    }
+}
+
+
+/* Talents Carousel */
+.talents-carousel::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 1;
+}
+
+.talents-carousel::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 1;
+}
+
+@media (min-width: 768px) {
+    .talents-carousel::before,
+    .talents-carousel::after {
+        width: 200px;
+    }
+}
+
+
+.talents-carousel .owl-item .talents-text,
+.talents-carousel .owl-item.center .talents-text * {
+    transition: .5s;
+}
+
+.talents-carousel .owl-item.center .talents-text {
+    background: var(--primary) !important;
+}
+
+.talents-carousel .owl-item.center .talents-text * {
+    color: #FFFFFF !important;
+}
+
+.talents-carousel .owl-dots {
+    margin-top: 24px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.talents-carousel .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #CCCCCC;
+    transition: .5s;
+}
+
+.talents-carousel .owl-dot.active {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.talents img{
+    transition: .5s;
+}
+
+.talents a:hover img{
+    transform: scale(1.1);
+}
+
+.talents a small{
+    color: var(--dark)
+}
+
+/* Footer */
+.footer .btn.btn-social {
+    margin-right: 5px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+    font-weight: normal;
+    border: 1px solid #FFFFFF;
+    border-radius: 35px;
+    transition: .3s;
+}
+
+.footer .btn.btn-social:hover {
+    color: var(--primary);
+}
+
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+    text-decoration: none;
+}
+
+.footer .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+    letter-spacing: 1px;
+    box-shadow: none;
+}
+
+/* Anchors */
+.anchors a {
+    color: var(--dark);
+}
+
+.videos a small {
+    color: var(--dark);
+}
+
+/* Styling for iframe popups */
+#popup1, #popup2, #popup3, 
+#popup4, #popup5, #popup6,
+#popup7, #popup8, #popup9,
+#popup10, #popup11, #popup12 { 
+    display: none; 
+    position: fixed; 
+    top: 12%; 
+    left: 15%; 
+    width: 70%; 
+    height: 70%; 
+    background-color: white; 
+    z-index: 10; 
+}
+
+#popup1 iframe, #popup2 iframe, #popup3 iframe,
+#popup4 iframe, #popup5 iframe, #popup6 iframe,
+#popup7 iframe, #popup8 iframe, #popup9 iframe,
+#popup10 iframe, #popup11 iframe, #popup12 iframe { 
+    width: 100%; 
+    height: 100%; 
+    border: 0; 
+}
+
+#popupdarkbg1, #popupdarkbg2, #popupdarkbg3,
+#popupdarkbg4, #popupdarkbg5, #popupdarkbg6,
+#popupdarkbg7, #popupdarkbg8, #popupdarkbg9,
+#popupdarkbg10, #popupdarkbg11, #popupdarkbg12 { 
+    position: fixed; 
+    z-index: 5; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden; 
+    background-color: rgba(0,0,0,.75);
+    display: none; 
+}
