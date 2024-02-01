@@ -1,5 +1,5 @@
 # Web-Development
-Basic webpage created using HTML CSS Javascript
+Basic webpage created using HTML CSS Javascript for my school's Web Development module.
 
 Inspired by the Virtual Youtuber group 'VSPO' project.
 
